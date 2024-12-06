@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hover Over Image To Change Test</title>
+		<script type="text/JavaScript">
+			//Dom Manip 1 Hover Image//
+			function getNewPic(){
+				document.getElementById("changeImage").src="abhydro1.jpg";//This line sets the source to the id "changeImage"//
+			}
+			function getOldPic(){//This function will reset the image to the original image when the mouse stops hovering over the image//
+				document.getElementById("changeImage").src="abwind1.jpg";//This line will set the source back to the original image
+			}
+		</script>
+	</head>
+	<body>
+			<img src="abwind1.jpg"  class="center" id="changeImage" onmouseover="getNewPic()" alt="Windturbine" onmouseout="getOldPic()"><!--Onmouseover and onmouseout code was found on W3schools during research for ideas for dom manipulation. In this case onmouseover triggers the getnewpic function when the mouse is hovering over the image. The onmouseoutfunction triggers the getoldpic function when the mouse is no longer hovering over the image--!>
+			
+	</body>
+</html>
