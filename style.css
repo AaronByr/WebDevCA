@@ -1,11 +1,5 @@
-.abImageGrid{
-	width:700px;/*Sets the maximum width of the container that the images will go in*/
-	height:600px;/*Sets the maximum height of the container that the images will go in*/
-	margin:auto;/*Centers the image container*/
-}
-
-.abImageGrid img{
-	width:45%;/*An image will take up 45% of the width in the image container. This allows for 2 images to be placed side by side*/
-	margin:1%;/*Adds a small space around each image/*
+.turbineText{
+	text-align:center;
+	font-size:17px;
 }
 

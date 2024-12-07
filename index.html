@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Working Image Grid </title>
+		<title>Dom Manip 2: Click a button to change text displayed</title>
 		<link href="style.css" rel="stylesheet">
+		<script type="text/JavaScript">
+		function changeText(){
+				text="Geothermal energy creates very little to no noise pollution";//This is the new text that will be displayed//
+				document.getElementById("textToChange").innerHTML= text;//The line with textToChange set as the id will have it's contents replaces with the above text
+				}
+		</script>
 	</head>
 	<body>
-		<div class="abImageGrid"><!--All images within this div link to the abImageGrid class in the CSS. This class was made by me and puts the images into a 2x2 grid--!>
-			<img src="abwind1.jpg" alt="Wind Turbine">
-			<img src="abgeothermal1.jpg" alt="Geothermal energy">
-			<img src="abhydro1.jpg" alt="Hydropower">
-			<img src="absolar1.jpg" alt="Solar panels">
-		</div>
+		<p id="textToChange" class="turbineText">Geothermal energy plants do not require any fuel to operate. This is because geothermal energy is natural</p>
+		<button class="abButton" onclick="changeText()">Click here to display another advantage</button><!--When the button is clicked, it will activate the changeText JS function which will change the advantage that is displayed on the page--!>
 	</body>
 </html>
