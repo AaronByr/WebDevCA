@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Dom Manip 2: Click a button to change text displayed</title>
+		<title>Dom Manip Test</title>
 		<link href="style.css" rel="stylesheet">
 		<script type="text/JavaScript">
-		function changeText(){
-				text="Geothermal energy creates very little to no noise pollution";//This is the new text that will be displayed//
-				document.getElementById("textToChange").innerHTML= text;//The line with textToChange set as the id will have it's contents replaces with the above text
-				}
+		//DOM manipulation: If the button is presssed, the text is hidden/shown
+		function showOrHideText(){
+			let doc = document.getElementById("showOrHideTask");
+				if(doc.style.display === "none"){//Checks if the p is currently hidden
+				doc.style.display = "inline"; //If the p is hidden, this line changes it to be visable
+			}else{
+				doc.style.display = "none"; //If the p can be seen, it is hidden as the display is set from "inline" to "none" 
+			}
+			}
 		</script>
 	</head>
 	<body>
-		<p id="textToChange" class="turbineText">Geothermal energy plants do not require any fuel to operate. This is because geothermal energy is natural</p>
-		<button class="abButton" onclick="changeText()">Click here to display another advantage</button><!--When the button is clicked, it will activate the changeText JS function which will change the advantage that is displayed on the page--!>
+		<h4>DOM Manip Test: Click a button to change or hide text</h4>
+				<p id="showOrHideTask"> Geothermal Energy plants are expensive to make, costing between $2-7 million to build</p>
+				<button onclick="showOrHideText()"> Click here to hide or show the disadvantage</button><!--When the button is pressed, the showOrHideText function is triggered--!>	
 	</body>
 </html>
