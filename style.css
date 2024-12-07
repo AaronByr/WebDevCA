@@ -1,0 +1,16 @@
+.ABForm{
+	border:3px black solid;/*Adds a border of 3px around the form*/
+	text-align:center;
+	background-color:#03045e;/*Sets the background colour of the form to a nice shade of dark blue*/
+	color:#ffb703;
+	max-width:500px;/*Makes sure that the form does not exceed 500px in width*/
+	padding:20px;/*The padding adds space inside the form*/
+	margin:20px auto;/*Centers the form horizontally*/
+}
+
+.ABFormGroupText{
+	margin-bottom:5px;/*Seperates each input slightly*/
+	display:flex;
+	flex-direction:column;/*Arranges the fields vertically*/
+}
+
