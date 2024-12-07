@@ -1,64 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>JS Form Validation</title>
+		<title>Working Image Grid </title>
 		<link href="style.css" rel="stylesheet">
-		<script type="text/JavaScript">
-			function validate(){
-			
-				let valid =true; //Tracks if the form is valid//
-				let msge="This form is incomplete: ";//This will come before all error messages if there are any and will store them//
-			
-				if(document.getElementById("fn").value  ==  ""){
-					msge+="Please fill in your first name, "; 
-					valid=false; //If the first name field is not filled in, this error message will add itself to the "This form is incomplete" message above. The form will be marked as false/invalid if this field is not filled in.
-				}
-				if(document.getElementById("ln").value  ==  ""){
-					msge+="Please fill in your last name, "; 
-					valid=false;//If the last name field is not filled in, this error message will add itself to the "This form is incomplete" message above. The form will be marked as false/invalid if this field is not filled in.   
-				}
-				if(document.getElementById("num").value == 0) {
-					msge+= "Please fill in a valid phone number, ";
-					valid= false;//If the phone number field is not filled in, this error message will add itself to the "This form is incomplete" message above. The form will be marked as false/invalid if this field is not filled in.
-				}
-				if(document.getElementById("email").value == ""){
-					msge+="Please fill in a valid email, ";
-					valid=false;
-				}else if(document.getElementById("email").value !== ""){
-				inputE = document.getElementById("email").value;
-					let symbol = inputE.indexOf("@");//This field checks where the @ symbol is situated within the field
-					if(symbol <1){
-						valid =false;//If the @symbol is not in a valid postion or is not present within the field, the below error will be added to the form incomplete message
-						msge+= "Invalid Email";
-					}
-				}
-				if(!valid){//If the form is invalid, it will display the relevent error messages
-					document.getElementById("details").innerHTML =msge;
-				}
-				return valid;//This line will return whether or not the form is valid or invalid. If it's valid the information submitted will disappear and the form would be hypothetically submitted//
-				}
-		</script>
 	</head>
 	<body>
-		<div class="ABForm">
-			<h1>Contact Form</h1>
-			<p>If you would like to contact Aaron, please fill out the following form:</p>
-			<form onsubmit="return validate()"><!--Ensures the function is carried out when the form is submitted--!>
-		<div class="ABFormGroupText">
-			First Name:<input type="text" id="fn"><br>
-		</div>
-		<div class="ABFormGroupText">
-			Last Name:<input type="text" id="ln"><br>
-		</div>
-		<div class="ABFormGroupText">
-			Phone Number:<input type="number" id="num"><br><!--Number input type was found on W3Schools and allows for only numbers to be inputted into the field--!>
-		</div>
-		<div class="ABFormGroupText">
-			Email: <input type="text" id="email"><br>
-		</div>
-			<input type="submit" value="Submit Form">
-		</form>
-		<p id="details"></p><!--This paragraph will display the error messages when the user hits the submit form button. If there are no error messages the form will be submitted--!>
+		<div class="abImageGrid"><!--All images within this div link to the abImageGrid class in the CSS. This class was made by me and puts the images into a 2x2 grid--!>
+			<img src="abwind1.jpg" alt="Wind Turbine">
+			<img src="abgeothermal1.jpg" alt="Geothermal energy">
+			<img src="abhydro1.jpg" alt="Hydropower">
+			<img src="absolar1.jpg" alt="Solar panels">
 		</div>
 	</body>
 </html>
